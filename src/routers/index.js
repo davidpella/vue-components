@@ -4,6 +4,7 @@ import HomePage from "../Pages/Home.vue";
 import AboutPage from "../Pages/About.vue";
 import ContentMenu from "../Pages/ContentMenu.vue";
 import ScrollAnElement from "../Pages/ScrollAnElement.vue";
+import TableColumnResize from "../Pages/TableColumnResize.vue";
 
 const routes = [
     {
@@ -20,6 +21,11 @@ const routes = [
         path: '/context-menu',
         name: 'contextMenu',
         component: ContentMenu,
+    },
+    {
+        path: '/table-column-resize',
+        name: 'tableColumnResize',
+        component: TableColumnResize,
     },
     {
         path: '/scroll-an-element-to-ensure-it-is-visible-in-a-scrollable-container',

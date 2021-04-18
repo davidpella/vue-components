@@ -38,10 +38,10 @@
                         class="block py-3 text-sm text-gray-600"
                     >Download a file</a>
 
-                    <a
-                        href="#"
+                    <router-link
+                        :to="{ name: 'tableColumnResize' }"
                         class="block py-3 text-sm text-gray-600"
-                    >Resize columns of a table</a>
+                    >Resize columns of a table</router-link>
 
                     <a
                         href="#"
@@ -66,7 +66,3 @@
         </div>
     </div>
 </template>
-
-<script>
-    export default {}
-</script>
