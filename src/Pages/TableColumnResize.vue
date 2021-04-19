@@ -18,11 +18,21 @@
 
             <div class="mt-4">
                 <table ref="resizeable" class="table border border-collapse">
+                    <caption>
+                        Table Resizable Columns
+                    </caption>
+
                     <thead>
                         <tr class="text-sm">
-                            <th class="relative px-3 py-2 border whitespace-nowrap text-left">No.</th>
-                            <th class="relative px-3 py-2 border whitespace-nowrap text-left">First name</th>
-                            <th class="relative px-3 py-2 border whitespace-nowrap text-left">Last name</th>
+                            <th class="relative px-3 py-2 text-sm text-gray-500 font-medium border whitespace-nowrap text-left">
+                                No.
+                            </th>
+                            <th class="relative px-3 py-2 text-sm text-gray-500 font-medium border whitespace-nowrap text-left">
+                                First name
+                            </th>
+                            <th class="relative px-3 py-2 text-sm text-gray-500 font-medium border whitespace-nowrap text-left">
+                                Last Name
+                            </th>
                         </tr>
                     </thead>
 
@@ -36,13 +46,60 @@
                 </table>
             </div>
 
-            <div class="mt-4">
+            <div class="mt-6">
+                <table class="w-full border border-collapse">
+                    <caption>
+                        Table Sort Icon
+                    </caption>
+
+                    <thead>
+                        <tr class="text-sm">
+                            <th class="relative px-3 py-2 border whitespace-nowrap text-left">
+                                <button type="button" class="flex items-center space-x-2">
+                                    <span class="text-sm font-medium">No.</span>
+                                </button>
+                            </th>
+
+                            <th class="relative px-3 py-2 border whitespace-nowrap text-left">
+                                <button type="button" class="flex items-center space-x-2">
+                                    <svg class="h-4 w-4 text-gray-500" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <line x1="4" y1="6" x2="13" y2="6"></line>
+                                        <line x1="4" y1="12" x2="11" y2="12"></line>
+                                        <line x1="4" y1="18" x2="11" y2="18"></line>
+                                        <polyline points="15 15 18 18 21 15"></polyline>
+                                        <line x1="18" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+
+                                    <span class="text-sm font-medium">First Name</span>
+                                </button>
+                            </th>
+
+                            <th class="relative px-3 py-2 border whitespace-nowrap text-left">
+                                <button type="button" class="flex items-center space-x-2">
+                                    <span class="text-sm font-medium">Last Name</span>
+                                </button>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr :key="row.id" v-for="row in rows">
+                            <td class="border px-3 py-2">{{ row.id }}</td>
+                            <td class="border px-3 py-2">{{ row.first_name }}</td>
+                            <td class="border px-3 py-2">{{ row.last_name }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-6">
                 <HeadlessTable
                     :rows="rows"
                     :columns="columns"
                     #default="{ rows, cols, selectAll }"
                 >
-                    <table class="border border-collapse">
+                    <table class="w-full border border-collapse">
                         <TableHead>
                             <thead>
                                 <tr>
@@ -59,8 +116,8 @@
                             </thead>
                         </TableHead>
 
-                        <TableBody v-for="row in rows">
-                            <tbody>
+                        <TableBody>
+                            <tbody v-for="row in rows">
                                 <TableRow :row="row" #default="{ show }">
                                     <tr @click="show">
                                         <TableCell>
