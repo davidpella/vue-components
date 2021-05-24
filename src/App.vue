@@ -57,6 +57,11 @@
                         href="#"
                         class="block py-3 text-sm text-gray-600"
                     >Autosuggestion</a>
+
+                    <router-link
+                        :to="{ name: 'gsap' }"
+                        class="block py-3 text-sm text-gray-600"
+                    >The GreenSock Animation Platform (GSAP)</router-link>
                 </nav>
             </aside>
 

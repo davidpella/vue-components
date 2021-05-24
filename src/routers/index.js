@@ -5,6 +5,7 @@ import AboutPage from "../Pages/About.vue";
 import ContentMenu from "../Pages/ContentMenu.vue";
 import ScrollAnElement from "../Pages/ScrollAnElement.vue";
 import TableColumnResize from "../Pages/TableColumnResize.vue";
+import GreenSockAnimationPlatform from "../Pages/GreenSockAnimationPlatform.vue";
 
 const routes = [
     {
@@ -26,6 +27,11 @@ const routes = [
         path: '/table-column-resize',
         name: 'tableColumnResize',
         component: TableColumnResize,
+    },
+    {
+        path: '/gsap',
+        name: 'gsap',
+        component: GreenSockAnimationPlatform
     },
     {
         path: '/scroll-an-element-to-ensure-it-is-visible-in-a-scrollable-container',
