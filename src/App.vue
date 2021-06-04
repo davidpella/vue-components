@@ -62,6 +62,16 @@
                         :to="{ name: 'gsap' }"
                         class="block py-3 text-sm text-gray-600"
                     >The GreenSock Animation Platform (GSAP)</router-link>
+
+                    <router-link
+                        :to="{ name: 'dropdown' }"
+                        class="block py-3 text-sm text-gray-600"
+                    >Dropdown</router-link>
+
+                    <router-link
+                        :to="{ name: 'listbox' }"
+                        class="block py-3 text-sm text-gray-600"
+                    >Listbox</router-link>
                 </nav>
             </aside>
 

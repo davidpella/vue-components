@@ -1,11 +1,13 @@
 import { createWebHistory, createRouter } from 'vue-router';
 
+import GSAP from "../Pages/GSAP.vue";
 import HomePage from "../Pages/Home.vue";
 import AboutPage from "../Pages/About.vue";
 import ContentMenu from "../Pages/ContentMenu.vue";
 import ScrollAnElement from "../Pages/ScrollAnElement.vue";
 import TableColumnResize from "../Pages/TableColumnResize.vue";
-import GreenSockAnimationPlatform from "../Pages/GreenSockAnimationPlatform.vue";
+import Dropdown from "../Pages/Dropdown.vue";
+import Listbox from "../Pages/Listbox.vue";
 
 const routes = [
     {
@@ -31,18 +33,28 @@ const routes = [
     {
         path: '/gsap',
         name: 'gsap',
-        component: GreenSockAnimationPlatform
+        component: GSAP
     },
     {
         path: '/scroll-an-element-to-ensure-it-is-visible-in-a-scrollable-container',
         name: 'scrollAnElementToEnsureItIsVisibleInAScrollableContainer',
         component: ScrollAnElement,
+    },
+    {
+        path: '/dropdown',
+        name: 'dropdown',
+        component: Dropdown,
+    },
+    {
+        path: '/listbox',
+        name: 'listbox',
+        component: Listbox,
     }
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
     routes: routes,
+    history: createWebHistory(),
 });
 
 export default router;
