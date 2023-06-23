@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto my-12">
-        <div class="flex -mx-3">
-            <aside class="w-1/4 px-3">
+        <div class="grid grid-cols-4 gap-8">
+            <aside class="col-span-1">
                 <nav class="divide-y">
                     <router-link
                         :to="{ name: 'home' }"
@@ -72,11 +72,16 @@
                         :to="{ name: 'listbox' }"
                         class="block py-3 text-sm text-gray-600"
                     >Listbox</router-link>
+
+                    <router-link
+                        :to="{ name: 'namespace-component' }"
+                        class="block py-3 text-sm text-gray-600"
+                    >Namespace Component</router-link>
                 </nav>
             </aside>
 
-            <main class="w-3/4 px-3">
-                <router-view></router-view>
+            <main class="col-span-3">
+                <RouterView />
             </main>
         </div>
     </div>

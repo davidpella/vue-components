@@ -154,12 +154,12 @@
 </template>
 
 <script>
-import HeadlessTable from "../components/HeadlessTable.vue";
-import TableHead from "../components/TableHead.vue";
-import TableColumn from "../components/TableColumn.vue";
-import TableBody from "../components/TableBody.vue";
-import TableCell from "../components/TableCell.vue";
-import TableRow from "../components/TableRow.vue";
+import HeadlessTable from "../Components/HeadlessTable.vue";
+import TableHead from "../Components/TableHead.vue";
+import TableColumn from "../Components/TableColumn.vue";
+import TableBody from "../Components/TableBody.vue";
+import TableCell from "../Components/TableCell.vue";
+import TableRow from "../Components/TableRow.vue";
 
 export default {
     components: {

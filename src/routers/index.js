@@ -8,6 +8,7 @@ import ScrollAnElement from "../Pages/ScrollAnElement.vue";
 import TableColumnResize from "../Pages/TableColumnResize.vue";
 import Dropdown from "../Pages/Dropdown.vue";
 import Listbox from "../Pages/Listbox.vue";
+import NamespaceComponent from "../Pages/NamespaceComponent.vue";
 
 const routes = [
     {
@@ -49,6 +50,11 @@ const routes = [
         path: '/listbox',
         name: 'listbox',
         component: Listbox,
+    },
+    {
+        path: '/namespace-component',
+        name: 'namespace-component',
+        component: NamespaceComponent,
     }
 ];
 
